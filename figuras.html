@@ -5,9 +5,81 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Figuras geométricas | Curso Práctico de JavaScript</title>
+  <link rel="stylesheet" href="figuras.css">
 </head>
 <body>
-  <h1>Figuras geométricas</h1>
+  <div class="container">
+
+    <div class="card">
+      <header>
+        <h1>Figuras geométricas</h1>
+        <p>Primer taller del Curso Práctico de JavaScript</p>
+      </header>
+
+      <section>
+        <h2>Calcula el área y perímetro de un cuadrado</h2>
+        <form>
+    
+          <div id='Cuadrados'>
+            <label for='ladoCuadrado'>Indica cuánto mide cada <span id='att'>lado</span> del Cuadrado: </label>
+            <br><br>
+      
+            <input id='ladoCuadrado' type='number' placeholder='Lados del cuadrado...'/>
+      
+            <button type='button' onclick='calcularPerimetroCuadrado()' >Calcula el Perímetro</button>
+            <button type='button' onclick='calcularAreaCuadrado()' >Calcula el Área</button>
+          </div>
+    
+          <br>
+    
+          <div id='Triangulos' >
+    
+            <label for="calcularTriangulo">Indica qué quieres calcular del Triángulo</label><br>
+            <select id="calcularTriangulo">
+              <option value="Área">Área</option>
+              <option value="Perímetro">Perímetro</option>
+            </select>
+            <br><br>
+    
+            <label for='inputTriangulo'>Indica las propiedades del Triángulo: </label>
+            <br><br>
+    
+            <label for='baseTriangulo'>Base: </label>
+            <input id='baseTriangulo' type="number" placeholder='Base del triángulo...' />
+            <br>
+    
+            <label for="alturaTriangulo">Altura: </label>
+            <input id='alturaTriangulo' type="number" placeholder='Altura del triángulo...' />
+            <br>
+    
+            <label for="ladoTriangulo1">Lado 1: </label>
+            <input id='ladoTriangulo1' type="number" placeholder='Lado 1 del triángulo...' />
+            <br>
+    
+            <label for="ladoTriangulo2">Lado 2: </label>
+            <input id='ladoTriangulo2' type="number" placeholder='Lado 2 del triángulo...' />
+      
+            <button type='button' onclick='calcularPerimetroTriangulo()' >Calcula el Perímetro</button>
+            <button type='button' onclick='calcularAreaTriangulo()' >Calcula el Área</button>
+          </div>
+          <br>
+    
+          <div id='Circulos'>
+            <label for='radioCirculo'>Indica el <span class="att">radio</span> del circulo: </label>
+            <br><br>
+    
+            <input id='radioCirculo' type="number" placeholder='Radio del circulo...'/>
+      
+            <button type='button' onclick='calcularPulgadas()' >Calcular las Pulgadas</button>
+            <button type='button' onclick='calcularDiametroCirculo()' >Calcular el Diametro</button>
+            <button type='button' onclick='calcularPerimetroCirculo()' >Calcular el Perímetro</button>
+            <button type='button' onclick='calcularAreaCirculo()' >Calcular el Área</button>
+          </div>
+    
+        </form>
+      </section>
+    </div>
+  </div>
 
   <script src="./figuras.js"></script>
 </body>

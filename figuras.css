@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Ubuntu+Mono&display=swap');
+
+html{
+  height: 100vh;
+  width: 100vw;
+}
+
+body{
+  background-image: url(./assets/bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+p,
+label{
+  font-family: 'Roboto', sans-serif;
+}
+
+span{
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card{
+  width: 50vw;
+  /* From https://css.glass */
+  background: rgba(235, 255, 251, 0.42);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.6px);
+  -webkit-backdrop-filter: blur(11.6px);
+  border: 1px solid rgba(235, 255, 251, 0.22);
+  padding: 1%;
+}
