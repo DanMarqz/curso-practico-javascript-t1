@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Figuras geométricas | Curso Práctico de JavaScript</title>
   <link rel="stylesheet" href="figuras.css">
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AACqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgAAAAAAAAIiIAAAAAAAIiIiAAAAAAIiIiIgAAAAIiIiIiIAAAIiIiIiIiAAIiIiIiIiIgAiIiIiIiIiACIiIiIiIiIAIiIiIiIiIgAhIiIiIiIiAAISIiIiIiAAACIiACIiAAAAAAAAAAAAD//wAA/n8AAPw/AAD4HwAA8A8AAOAHAADAAwAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAMADAADhhwAA" rel="icon" type="image/x-icon" />
 </head>
 <body>
   <div class="container">
@@ -15,12 +16,13 @@
         <h1>Figuras geométricas</h1>
         <p>Primer taller del Curso Práctico de JavaScript</p>
       </header>
+      <hr>
 
       <section>
-        <h2>Calcula el área y perímetro de un cuadrado</h2>
         <form>
-    
+          
           <div id='Cuadrados'>
+            <h2>Calcula el área y perímetro de un Cuadrado</h2>
             <label for='ladoCuadrado'>Indica cuánto mide cada <span id='att'>lado</span> del Cuadrado: </label>
             <br><br>
       
@@ -30,41 +32,51 @@
             <button type='button' onclick='calcularAreaCuadrado()' >Calcula el Área</button>
           </div>
     
-          <br>
+          <hr>
     
+          
           <div id='Triangulos' >
+            <h2>Calcula el área y perímetro de un Triangulo</h2>
     
             <label for="calcularTriangulo">Indica qué quieres calcular del Triángulo</label><br>
             <select id="calcularTriangulo">
+              <option selected disabled> -- Elija una opcion -- </option>
               <option value="Área">Área</option>
               <option value="Perímetro">Perímetro</option>
             </select>
             <br><br>
     
-            <label for='inputTriangulo'>Indica las propiedades del Triángulo: </label>
+            <label for='inputTriangulo' id='inputDelTriangulo'>Indica las propiedades del Triángulo: </label>
             <br><br>
     
-            <label for='baseTriangulo'>Base: </label>
-            <input id='baseTriangulo' type="number" placeholder='Base del triángulo...' />
-            <br>
+            <div id="baseDelTriangulo">
+              <label for='baseTriangulo'>Base: </label>
+              <input id='baseTriangulo' type="number" placeholder='Base del triángulo...' />
+            </div>
     
-            <label for="alturaTriangulo">Altura: </label>
-            <input id='alturaTriangulo' type="number" placeholder='Altura del triángulo...' />
-            <br>
+            <div id="alturaDelTriangulo">
+              <label for="alturaTriangulo">Altura: </label>
+              <input id='alturaTriangulo' type="number" placeholder='Altura del triángulo...' />
+            </div>
     
-            <label for="ladoTriangulo1">Lado 1: </label>
-            <input id='ladoTriangulo1' type="number" placeholder='Lado 1 del triángulo...' />
-            <br>
-    
-            <label for="ladoTriangulo2">Lado 2: </label>
-            <input id='ladoTriangulo2' type="number" placeholder='Lado 2 del triángulo...' />
+            <div id="ladoDelTriangulo1">
+              <label for="ladoTriangulo1">Lado 1: </label>
+              <input id='ladoTriangulo1' type="number" placeholder='Lado 1 del triángulo...' />
+            </div>
+
+            <div id="ladoDelTriangulo2">
+              <label for="ladoTriangulo2">Lado 2: </label>
+              <input id='ladoTriangulo2' type="number" placeholder='Lado 2 del triángulo...' />
+            </div>
       
-            <button type='button' onclick='calcularPerimetroTriangulo()' >Calcula el Perímetro</button>
-            <button type='button' onclick='calcularAreaTriangulo()' >Calcula el Área</button>
+            <button type='button' onclick='calcularPerimetroTriangulo()' id='botonTrianguloPerimetro'>Calcula el Perímetro</button>
+            <button type='button' onclick='calcularAreaTriangulo()' id='botonTrianguloArea'>Calcula el Área</button>
           </div>
-          <br>
+          <hr>
     
+          
           <div id='Circulos'>
+            <h2>Calcula las pulgadas, diametro, perímetro y area de un Circulo</h2>
             <label for='radioCirculo'>Indica el <span class="att">radio</span> del circulo: </label>
             <br><br>
     

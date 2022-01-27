@@ -50,6 +50,14 @@ const ladoCuadrado = document.getElementById( 'ladoCuadrado' ),
       ladoTriangulo2 = document.getElementById( 'ladoTriangulo2' ),
       alturaTriangulo = document.getElementById( 'alturaTriangulo' ),
       baseTriangulo = document.getElementById( 'baseTriangulo' ),
+      calcularTriangulo = document.getElementById( 'calcularTriangulo' ),
+      baseDelTriangulo = document.getElementById( 'baseDelTriangulo' ),
+      alturaDelTriangulo = document.getElementById( 'alturaDelTriangulo' ),
+      ladoDelTriangulo1 = document.getElementById( 'ladoDelTriangulo1' ),
+      ladoDelTriangulo2 = document.getElementById( 'ladoDelTriangulo2' ),
+      botonTrianguloArea = document.getElementById( 'botonTrianguloArea' ),
+      botonTrianguloPerimetro = document.getElementById( 'botonTrianguloPerimetro' ),
+      inputDelTriangulo = document.getElementById( 'inputDelTriangulo' ),
       radioCirculo = document.getElementById( 'radioCirculo' );
 
 const calcularPerimetroCuadrado = () => {
@@ -105,3 +113,34 @@ const calcularPulgadas = () => {
       pulgadas = pulgadasCirculo( radio );
   alert(pulgadas)
 }
+
+const calculosTriangulo = () => {
+  if( calcularTriangulo.value == 'Perímetro'){
+    botonTrianguloArea.setAttribute( 'style', 'display: none' );
+    alturaDelTriangulo.setAttribute( 'style', 'display: none' );
+    baseDelTriangulo.removeAttribute( 'style' );
+    inputDelTriangulo.removeAttribute( 'style' );
+    ladoDelTriangulo1.removeAttribute( 'style' );
+    ladoDelTriangulo2.removeAttribute( 'style' );
+    botonTrianguloPerimetro.removeAttribute( 'style' );
+  } else if( calcularTriangulo.value == 'Área'){
+    ladoDelTriangulo1.setAttribute( 'style', 'display: none' );
+    ladoDelTriangulo2.setAttribute( 'style', 'display: none' );
+    botonTrianguloPerimetro.setAttribute( 'style', 'display: none' );
+    baseDelTriangulo.removeAttribute( 'style' );
+    inputDelTriangulo.removeAttribute( 'style' );
+    alturaDelTriangulo.removeAttribute( 'style' );
+    botonTrianguloArea.removeAttribute( 'style' );
+  } else {
+    inputDelTriangulo.setAttribute( 'style', 'display: none' );
+    baseDelTriangulo.setAttribute( 'style', 'display: none' );
+    ladoDelTriangulo1.setAttribute( 'style', 'display: none' );
+    ladoDelTriangulo2.setAttribute( 'style', 'display: none' );
+    alturaDelTriangulo.setAttribute( 'style', 'display: none' );
+    botonTrianguloArea.setAttribute( 'style', 'display: none' );
+    botonTrianguloPerimetro.setAttribute( 'style', 'display: none' );
+  }
+}
+
+document.addEventListener( 'DOMContentLoaded', calculosTriangulo );
+calcularTriangulo.addEventListener( 'change', calculosTriangulo );
